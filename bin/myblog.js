@@ -25,7 +25,5 @@ option('-o, --output <dir>', '生成的静态html存放目录').
 action(require('../lib/cmd_build'));
 
 // 开始解析
-
-program.parse(process.argv);
-
-
+console.log(process.argv)
+program.parse(process.argv); 
