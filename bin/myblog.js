@@ -16,7 +16,10 @@ program.command('help').description('显示使用帮助').action(function() {
 program.command('create [dir]').description('创建一个空的博客').action(require('../lib/cmd_create'));
 
 // preview 命令
-program.command('preview [dir]').description('实时预览').action(require('../lib/cmd_preview'));
+program.command('preview [dir]').description('实时预览').action(function(dir) {
+    var a = require('../lib/cmd_preview');
+    a(dir);
+});
 
 // build 命令
 program.command('build [dir]').
