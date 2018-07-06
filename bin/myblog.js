@@ -27,6 +27,12 @@ description('生成整站静态html').
 option('-o, --output <dir>', '生成的静态html存放目录').
 action(require('../lib/cmd_build'));
 
+// build 命令
+program.command('server [dir]').
+description('生成整站静态html').
+option('-o, --output <dir>', '生成的静态html存放目录').
+action(require('../lib/cmd_server'));
+
 // 开始解析
 console.log(process.argv)
 program.parse(process.argv); 
